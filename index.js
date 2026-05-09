@@ -43,7 +43,7 @@ try{
 const existingStudent = await Student.findOne({ email });
     if (existingStudent) {
   return res.status(409).json({
-    error: 'Student with this email already exists'
+    error: 'Profile already exists with this email.'
   });
 }
 const newStudent = new Student({ Fullname, email,phoneNumber, skillCategory,gender, address, isVerified, age, grade});
